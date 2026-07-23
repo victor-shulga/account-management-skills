@@ -1,10 +1,12 @@
 ---
 name: case-study-writer
 description: >
-  Turns a finished client project into a publishable case study: interview questions →
-  data collection → written case in the "situation → what we did → result in numbers"
-  structure, in 3 output formats (website page copy, one-page PDF outline, LinkedIn post
-  version). Built for B2B service companies (agencies, outsourcing, consulting).
+  Turns a finished client project into a publishable case study in the canonical
+  12-section Case Study Kit structure: SME interview questionnaire → data collection →
+  result-first narrative (snapshot → 3-type Challenge → 1:1 Solution → before→after
+  Results → testimonial → CTA → SEO), plus a designer visual brief and a pre-launch
+  checklist. Also outputs 3 derivative formats (website page, one-pager PDF outline,
+  LinkedIn handoff). Built for B2B service companies (agencies, outsourcing, consulting).
   Use when the user says: "напиши кейс", "зроби case study", "оформи проєкт у кейс",
   "case study from this project", "перепиши кейс", "у нас є результат — треба кейс",
   or pastes project notes / a call transcript / an old case and asks to turn it into
@@ -15,92 +17,174 @@ description: >
 
 # Case Study Writer
 
+Produces a case study in the **Case Study Kit** structure — the canonical 12-section format
+(result-first, scannable in 60 seconds). The case study is a salesperson: it convinces the
+NEXT prospect with numbers and a sequence of decisions, not adjectives.
+
 ## What this skill produces
 
-One case study in up to 3 formats (ask which are needed, default = website page):
-1. **Website case page** — full copy, ready to paste into CMS.
-2. **One-pager outline** — sections + copy for a PDF the sales team attaches to proposals.
-3. **LinkedIn version** — a post-ready summary handed off to the post-writing process.
+1. **Website case page** — full 12-section copy with inline visual markers, ready for CMS.
+2. **One-pager outline** — condensed sections for the PDF sales attaches to proposals.
+3. **LinkedIn handoff** — a post-ready summary passed to the post-writing process.
+4. On demand: the **SME interview questionnaire** (if nothing is written yet), the
+   **designer visual brief**, and the **pre-launch checklist**.
 
-Working language: match the user. Case language: the language of the client's market
-(ask if unclear — usually English).
+Working language: match the user. Case language: the client's market (ask if unclear —
+usually English). Ask up front which output formats are needed (default = website page).
 
 ## Hard rules
 
-- **No fabrication.** Every number comes from the user or their materials. If a number
-  is missing, insert a visible placeholder `[[уточнити: X]]` and list all placeholders
-  at the end. Never invent metrics, quotes, or timelines.
-- **No result — no case.** If the project has no measurable outcome yet, say so and
-  offer the fallback structure (see "Weak-numbers mode" below) instead of faking impact.
-- **Client confidentiality.** Ask whether the client's name/logo may be used. If not,
+- **No fabrication.** Every number comes from the user or their materials. Missing number →
+  insert a visible placeholder `[[уточнити: X]]` and list all placeholders at the end.
+  Never invent metrics, quotes, or timelines.
+- **No result — no case.** No measurable outcome yet → say so and offer Weak-numbers mode
+  (below) instead of faking impact.
+- **≤150 words per section.** Must scan in 60 seconds. "2000 words" is NOT the goal —
+  clarity is. If a section does not move the sale, cut it.
+- **Outcome ≠ output.** Results = business consequences (before → after). Features = what
+  was shipped. Never mix them.
+- **Client confidentiality / NDA.** Ask whether the client's name/logo may be used. If not,
   anonymize: "a 120-person MEP engineering firm (US)" — industry + size + geo, no name.
-- Quotes only verbatim from provided materials. Light grammar cleanup allowed, meaning
-  untouched.
+  Blur/anonymize any NDA data in screenshots. Ask what may NOT be published (numbers, names).
+- **Quotes only verbatim** from provided materials. Light grammar cleanup allowed, meaning
+  untouched. Minimum **2 pull-quotes** (one at the Challenge, one at the Result) + 1 full
+  testimonial.
+- **CTA mandatory**, ends with a question. A case without a CTA loses the lead.
+- **No AI clichés, no negative parallelism** («не X, а Y» — banned; "cutting-edge",
+  "seamless", "game-changing" — banned). Active voice, past tense, concrete. Run the final
+  through `anticopywriting-ai`.
+- **Fact-check** every number and name against the SME answers before shipping.
 
-## Step 1 — Intake
+## Step 1 — Intake (SME questionnaire → 12 sections)
 
-Collect (ask only for what's missing):
-- Who was the client: industry, size, geography, who was the buyer.
-- Starting point: what hurt, what it cost them (time / money / risk), why now.
-- What was done: scope, timeline, team, tools — 3–6 concrete actions.
-- Result: numbers (before → after), timeframe, secondary wins.
-- Proof assets: quote, screenshots, before/after artifacts.
-- Permission: name + logo usable? Quote approved?
+If the user has notes / a call transcript → extract answers from there first, ask only the
+gaps. If they have nothing written → output this questionnaire (they run it with the delivery
+team or the client in one 45–60 min interview, then continue). Ask open questions, always ask
+for **numbers**; "don't know the exact figure" → ask for a range/estimate.
 
-If the user has a call transcript or project notes — extract answers from there first,
-then ask only the gaps.
-
-**Interview mode:** if the user has nothing written, output the interview question list
-(8–10 questions mirroring the bullets above) so they can run it with the delivery team
-or the client, then continue when answers come back.
+- **A · Client context** (→ sections 2, 3) — what the company does, market/geo, headcount;
+  how they stand out; who the stakeholder was (role, not name yet); engagement model,
+  duration, our team composition. *(Can be self-researched.)*
+- **B · Challenge** (→ section 4) — the **business** result they needed and why now (deadline,
+  investor, competitor); the hardest **technical** part (legacy, integrations, load, data);
+  the **delivery** challenges (timeline, team, unstable requirements, time zones); the cost of
+  NOT solving it; prior attempts / other vendor and why it failed.
+- **C · Why us + approach** (→ section 5) — why us over a competitor / in-house; how it
+  started (discovery / workshop / audit); key milestones and dates (Week 0 → launch); what
+  changed along the way (scope, priorities).
+- **D · Solution** (→ section 6) — how EACH of the 3 challenges (business / tech / delivery)
+  was solved; the key architectural/product decisions and why; deliberate trade-offs
+  (scope cut, MVP focus); which screen/flow best illustrates the solution (→ designer).
+- **E · Results — NUMBERS REQUIRED** (→ section 7) — the main result metric + figure
+  (mandatory); before → after on 3–4 metrics (time, money, conversion, users, % growth);
+  business consequences (revenue, funding, savings, speed, retention); what the client can now
+  do that they couldn't before; any post-launch data (3 / 6 months).
+- **F · Output** (→ section 8) — the 4–6 key features/modules shipped; what the client values
+  most.
+- **G · Tech** (→ section 9) — full stack (frontend, backend, infra, integrations, AI/data);
+  why these technologies.
+- **H · Quote** (→ sections 4, 7, 10) — will the client give an official quote + name/role/logo;
+  one sentence on why they'd recommend us; may the company be named publicly or anonymized (NDA).
+- **I · Legal / media** — what may NOT be published (numbers, names, screens under NDA);
+  brand assets available (logo, team photo, product screens).
 
 ## Step 2 — Find the spine
 
-Before writing, state in one sentence: **for whom this case sells what**.
-Pick the ONE result that matters to the target reader (the next prospect, not the past
-client). Everything else supports it. If the project had many outcomes, lead with the
-one closest to money or risk.
+Before writing, state in one sentence: **for whom this case sells what**. Pick the ONE result
+that matters to the target reader (the next prospect, not the past client). Everything else
+supports it. If the project had many outcomes, lead with the one closest to money or risk.
 
-## Step 3 — Write (website format)
+## Step 3 — Write (website format · 12 sections, strict order)
 
-Structure — strict order:
+Each solution maps 1:1 to its challenge. One narrative — the reader flows pain → why us →
+what we did → what came out; each section sets up the next. Mark visual placeholders inline
+(they go to the designer).
 
-1. **Headline** = result, not process. Formula: `[Result with number] for [client type]
-   in [timeframe]`. Not "How we built X".
-2. **Snapshot block** — 3–4 stat tiles: the key numbers (before → after).
-3. **Client & context** — 2–3 sentences. Who they are, what was at stake.
-4. **The problem** — in the client's own words where possible. Concrete pain, its cost.
-5. **What we did** — 3–6 steps, each one line of what + one line of why it mattered.
-   No tool-worship: tools are mentioned, not celebrated.
-6. **The result** — numbers first, then qualitative wins. Timeframe explicit.
-7. **Client quote** — if approved. One quote, placed after the result.
-8. **CTA** — one action for a reader with the same problem, ends with a question.
+1. **Title + headline metric** — `[what we did] + [main number]`. Not "How we built X".
+   Example: *"Released MVP in 8 weeks → first 100 paying customers & $30K accelerator funding"*.
+   Number is mandatory.
+2. **At-a-glance snapshot** `[SNAPSHOT]` — scannable panel right under the title:
+   Industry · Location · Team size · Engagement model · Duration · Stack · Headline result.
+3. **About the Client** — 2–3 sentences: business, industry, market position, headcount.
+   No water. Who they are and why to take them seriously.
+4. **The Challenge** — three sub-blocks:
+   - **Business Challenge** — the business problem being solved.
+   - **Technical Challenge** — the hardest thing technically.
+   - **Delivery Challenge** — team / process / timeline challenges.
+   Insert the first **pull-quote** about the pain here `[QUOTE]`. State the cost of inaction.
+5. **Why us + Approach** — why they chose us + how we worked: discovery → sprints → key
+   milestones. Short timeline strip (Week 0 / 2 / 6 / 8). Removes "why trust you".
+6. **The Solution → mapped 1:1 to Challenge** — each solution explicitly names the challenge
+   it closes:
+   - **Solution → Business Challenge:** … `[SCREEN]`
+   - **Solution → Technical Challenge:** … `[DIAGRAM]`
+   - **Solution → Delivery Challenge:** …
+   Features are woven in here by the way, not as a detached list.
+7. **Results & Business Value** — **before → after** with numbers `[METRIC]`, not "built a
+   dashboard". Table: Metric · Before · After. Then the second **pull-quote** about the
+   result `[QUOTE]`. Timeframe explicit.
+8. **Features Delivered** — short list of what shipped (4–6). Output ≠ outcome — do not
+   confuse with Results.
+9. **Tech Stack** `[STACK]` — frontend, backend, infra, integrations (logos/list).
+10. **Full Testimonial** `[QUOTE]` — 2–4 sentence quote + name, role, photo/logo. Strongest
+    one is about ROI or trust; placed after the result.
+11. **CTA** — one action for a reader with the same problem, ends with a question.
+    *"Facing a similar challenge? → Book a call."*
+12. **SEO / meta** — target keyword (in H1 + first 100 words), meta title ≤60 chars, meta
+    description ≤155, alt tags on all visuals, internal links to adjacent cases/services.
 
-Length: 400–700 words. Voice: dry, specific, zero superlatives ("cutting-edge",
-"seamless", "game-changing" — banned). A case study convinces with numbers and
-sequence of decisions, not adjectives.
+Voice: dry, specific, zero superlatives. ≤150 words/section — but USE the allowance:
+aim **~1000–1500 words total** across the sections. "2000 words" is the anti-goal
+(clarity, not length), yet a case with 40-word sections reads as underbaked, not clean.
+Fill each section with real story/decisions/context up to the ceiling; cut only water.
 
 ## Weak-numbers mode
 
 If the client cannot share hard numbers (NDA, no baseline measured):
-- Lead with the **operational** change: "from 3 tools and manual copy-paste to one
-  pipeline", "first 5 SQLs from a channel that produced zero".
+- Lead with the **operational** change: "from 3 tools and manual copy-paste to one pipeline",
+  "first 5 SQLs from a channel that produced zero".
 - Use ranges or ratios agreed with the client ("~2× faster", "under 4 weeks").
 - Never dress qualitative claims as metrics.
 
 ## Step 4 — Derivative formats
 
-- **One-pager**: Headline · 3 stat tiles · Problem (2 lines) · Solution (3 bullets) ·
-  Result (2 lines) · Quote · Contact. Fits one page.
-- **LinkedIn handoff**: 5–7 line summary (hook candidate + core numbers + one
-  surprising detail). Explicitly mark it as INPUT for the post-writing process,
-  not a finished post.
+- **One-pager**: Headline · 3 stat tiles · Problem (2 lines) · Solution (3 bullets) · Result
+  (2 lines) · Quote · Contact. Fits one page.
+- **LinkedIn handoff**: 5–7 line summary (hook candidate + core numbers + one surprising
+  detail). Explicitly mark it as INPUT for the post-writing process, not a finished post.
 
-## Step 5 — Ship checklist
+## Step 5 — Designer brief (visual markers)
 
-- [ ] Every number sourced or marked `[[уточнити]]`
-- [ ] Client naming/anonymity per permission
-- [ ] Headline states the result
-- [ ] No banned superlatives
-- [ ] CTA ends with a question
-- [ ] Placeholder list printed at the end (if any)
+Every marker left in the draft is a visual to produce:
+
+| Marker | What to make |
+| --- | --- |
+| `[HERO]` | Hero visual on top: product in context + headline metric as a badge |
+| `[SNAPSHOT]` | At-a-glance panel (icons: industry / team / duration / stack) |
+| `[BEFORE/AFTER]` | Before/after comparison (metrics or UI) |
+| `[DIAGRAM]` | Architecture / flow / process |
+| `[SCREEN]` | Product screens in a device frame, clean, retina |
+| `[METRIC]` | Big number tiles for the Results section |
+| `[STACK]` | Technology logos in a row |
+| `[QUOTE]` | Pull-quote card with client photo/logo |
+
+Design requirements: agency brand colors/fonts, white background under screens; real project
+screens (blur/anonymize under NDA), not stock mocks; mobile contrast & readability (most
+traffic is phone); alt text on every visual; export WebP/optimized, lazy-load, ≤200KB where
+possible.
+
+## Step 6 — Pre-launch checklist
+
+- [ ] Number is in the headline
+- [ ] Snapshot panel filled
+- [ ] Each Challenge has a mapped Solution (1:1)
+- [ ] Results in before→after format with numbers
+- [ ] 2+ pull-quotes + 1 full testimonial
+- [ ] CTA present, clickable, ends with a question
+- [ ] All `[markers]` replaced with final visuals
+- [ ] Legal approval on numbers / name / screens (especially NDA)
+- [ ] SEO: meta title/description, keyword, alt tags, internal links
+- [ ] Run through `anticopywriting-ai` (no AI trace, no negative parallelism)
+- [ ] Mobile check
+- [ ] Every number sourced or marked `[[уточнити]]` — placeholder list printed at the end
+- [ ] Remove any internal / references section from the public version

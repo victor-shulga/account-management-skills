@@ -15,9 +15,9 @@ Restart your Claude Code session after install — skills load at session start.
 
 ## Skills included
 
-- `case-study-writer`
-- `client-health-check`
-- `upsell-mapper`
+- **`case-study-writer`** — a finished project → a publishable case study in the 12-section Case Study Kit structure (result-first snapshot → 3-type Challenge → 1:1 Solution → before→after Results → testimonial → CTA → SEO), plus the SME interview questionnaire, a designer visual brief and a pre-launch checklist. Outputs 3 formats: website page, one-pager PDF outline, LinkedIn handoff.
+- **`client-health-check`** — scores every active account green / yellow / red on 6 health criteria and outputs a health table + an action plan for the reds.
+- **`upsell-mapper`** — builds a client × services cross-sell matrix, finds the gaps, and prioritizes the realistic expansion moves.
 
 ## Requirements & integrations
 
