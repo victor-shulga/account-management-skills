@@ -29,7 +29,7 @@ Before touching the target, you must have:
 |---|---|---|
 | Vendor ICP + anti-ICP | every fit judgement | **STOP** — ask. Do not infer an ICP from the vendor's website. |
 | Vendor offer / services list | the angle | **STOP** — ask |
-| Lead-scoring rubric | the number + band | run without it → deliver fit verbatim, flag "no rubric" |
+| Lead-scoring rubric | the number + band | fall back to the built-in rubric (Phase 4), labelled as not client-approved |
 | Prospect's market language | first-touch drafts | infer from HQ country, state the assumption |
 
 If the vendor has a scoring skill of its own (e.g. a `*-lead-scoring` skill), call it rather than inventing a rubric.
@@ -105,11 +105,55 @@ That is a **data-backed capacity gap** — the strongest possible outbound hook,
 
 ## Phase 4 — Score, then re-score
 
-Run the vendor's rubric after Phase 1 → preliminary score. Run it **again** after Phases 2–3 → revised score with a Δ column and a one-line justification per changed category.
+Run the rubric after Phase 1 → preliminary score. Run it **again** after Phases 2–3 → revised score with a Δ column and a one-line justification per changed category.
 
 The two-pass score is not bureaucracy: it shows which findings moved the account and is what makes the dossier reusable when the account is revisited.
 
-Always output: total, band, **confidence (L/M/H)**, anti-ICP gates triggered, watch-flags, remaining data-gaps.
+**Which rubric:** if the vendor has an approved scoring rubric or a `*-lead-scoring` skill, use it — it beats the fallback below, and a client-approved rubric must never be silently replaced. Use the fallback only when no rubric exists, and label the score `fallback rubric — not client-approved`.
+
+### Step 1 — Anti-ICP gates (before any points)
+
+Check the vendor's anti-ICP list first. If any gate fires → **Disqualify**, stop, do not score. Write which gate and why. A disqualified account still gets §1, §6 and §8 so the decision is auditable and the account is not re-researched in three months.
+
+Typical gates: wrong geography · out-of-scope service · deal size below floor with no recurring path · capability already in-house and idle · a cultural or regulatory block on this delivery model.
+
+### Step 2 — Score 9 categories (100 pts)
+
+| # | Category | Max | Bands |
+|---|---|---|---|
+| 1 | Deal potential | 20 | Tier 1 20 · Tier 2 10 · Tier 3 5 |
+| 2 | Geography | 15 | focus market 15 · secondary 10 · outside 0 |
+| 3 | Industry | 10 | core vertical 10 · adjacent 5 · unrelated 0 |
+| 4 | Headcount | 5 | sweet spot 5 · one band off 3 · far off 1 |
+| 5 | Services match | 10 | what the vendor does best 10 · can do, no proof 5 · none 0 |
+| 6 | Service-need signal | 15 | hiring the exact role / tender win 15 · no internal bench 10 · legacy stack or leadership change 5 |
+| 7 | Digital maturity | 5 | mature 5 · mid 3 · immature 0 |
+| 8 | DM title reachable | 10 | economic buyer or functional head 10 · one level below 5 · specialist only 0 |
+| 9 | Engagement & intent | 10 | high-intent page visit or inbound 10 · newsletter/follow 5 · cold 0 |
+
+Set the tier in #1 from firmographics (industry + size + service fit), not from enthusiasm.
+
+**Scoring rules — these are what make the number mean anything:**
+
+- **#6 takes the HIGHEST band, never the sum.** Three weak signals do not equal one strong one.
+- **Missing data scores 0 plus a `data-gap` flag.** Never guess firmographics, signals or titles to fill a row.
+- **On doubt, take the lower band.** A dossier that reads WARM and converts is worth more than one that reads HOT and dies.
+- Every signal carries a **source + date**. Decay: hiring posts stale after ~30 days, tender/funding news after ~90. An expired signal scores as absent.
+
+### Step 3 — Band → action
+
+| Total | Band | Action |
+|---|---|---|
+| 75–100 | HOT | direct outreach now, both tracks |
+| 60–74 | WARM | direct outreach, but only if Deal + Geo + Industry + DM all match; otherwise nurture |
+| 40–59 | COLD | nurture, revisit on a new signal |
+| < 40, or any gate fired | DISQUALIFY | drop, with the reason recorded |
+
+### Step 4 — Report
+
+Total · Band · **Confidence (H/M/L)** · gates checked and their result · watch-flags (things that could flip the verdict) · remaining data-gaps with the source that would close each.
+
+Confidence is about *evidence*, not optimism: H = registry + people-scan + signals all verified; M = one pass missing; L = website only.
 
 ---
 
@@ -164,8 +208,12 @@ missing direct signal.]
 [Every URL used, grouped by entity.]
 
 ## 9. Lead score — preliminary
+**Total = [n]/100 · Band: [BAND] → [action] · Confidence: [H/M/L]**
+[State which rubric: client-approved, or built-in fallback.]
 | Category | Score | Rationale |
-Anti-ICP gates · Watch-flags · Data-gaps
+**Anti-ICP gates:** [each checked, and its result — not just "none fired"]
+**Watch-flags:** [what could flip the verdict]
+**Data-gaps:** [what is missing + the source that would close it]
 
 ## 10. First-touch (draft · pre-humanization)
 [Per track, in the prospect's language. Note the register (formal/informal) and why.]
@@ -201,7 +249,7 @@ signal hunt per related entity]
 | Employee composition | Apify LinkedIn company-employees actor | manual LinkedIn browse, note "partial" |
 | Open roles | company ATS URL | Indeed / StepStone / local boards |
 | Related entities | registry address+officer search | site imprint, partner pages |
-| Score | vendor's `*-lead-scoring` skill | fit verbatim + "no rubric" flag |
+| Score | vendor's approved rubric / `*-lead-scoring` skill | built-in 9-category fallback (Phase 4), labelled as not client-approved |
 | Copy pass | vendor's humanization skill | flag as un-humanized |
 | Delivery | Notion page under the client | markdown file |
 
@@ -217,6 +265,8 @@ Before delivering:
 - Is every number attributable to a named source in §8?
 - Did I run the **structure trace** — checked for sister/parent/JV entities?
 - Did I count people **by function**, not just total headcount?
+- Did I check the anti-ICP gates **before** scoring, and record the result of each?
+- Does every scored category trace to a source, with zeros flagged as data-gaps rather than filled in by guess?
 - Is the fit verdict honest about what does *not* match?
 - Are the DMs a pair (economic + technical), each with a distinct axis?
 - Are risks written as reasons to hesitate, not as softened positives?
