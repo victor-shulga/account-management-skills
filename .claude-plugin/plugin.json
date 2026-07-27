@@ -1,7 +1,7 @@
 {
   "name": "account-management-engine",
-  "version": "0.3.0",
-  "description": "4 Claude Code skills for the retention & growth block of a GTM system for B2B service companies: client health check (6-criteria green/yellow/red scoring with action plans), upsell mapper (client × services cross-sell matrix with prioritized entry moves), case study writer (project → publishable case in the 12-section Case Study Kit structure, 3 output formats), and deep company analyser (deep account/customer research → pains, triggers, customer language, competitive positioning; powers account dossiers). Built and battle-tested by Victor Shulga (Fractional CRO).",
+  "version": "0.4.0",
+  "description": "5 Claude Code skills for the retention & growth block of a GTM system for B2B service companies: client health check (6-criteria green/yellow/red scoring with action plans), upsell mapper (client x services cross-sell matrix with prioritized entry moves), case study writer (project -> publishable case in the 12-section Case Study Kit structure, 3 output formats), account dossier (one target company -> signal stack, ICP fit, decision-maker pair, two-pass lead score and first-touch drafts in the prospect's language), and customer intelligence (your own case studies + reviews -> pains, triggers, customer language, competitive positioning). Built and battle-tested by Victor Shulga (Fractional CRO).",
   "author": {
     "name": "Victor Shulga",
     "url": "https://github.com/victor-shulga"
@@ -11,6 +11,8 @@
     "retention",
     "upsell",
     "case-study",
+    "account-research",
+    "prospecting",
     "b2b",
     "gtm"
   ],
