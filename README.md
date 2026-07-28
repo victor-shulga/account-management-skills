@@ -6,12 +6,33 @@ Part of the GTM-system methodology by [Victor Shulga](https://victorshulga.com) 
 
 ## Install (Claude Code)
 
+Type these in the Claude Code chat (slash commands, not your shell):
+
 ```
 /plugin marketplace add victor-shulga/account-management-skills
 /plugin install account-management-engine@account-management-skills
 ```
 
 Restart your Claude Code session after install — skills load at session start.
+
+## Update
+
+Run these **in your terminal** (not in the Claude Code chat). The first refreshes the cached marketplace catalog — without it Claude Code will not see the new version; the second updates the plugin itself:
+
+```bash
+claude plugin marketplace update account-management-skills
+claude plugin update account-management-engine@account-management-skills
+```
+
+Then restart Claude Code — skills load at session start, so an update is not live until you do.
+
+Prefer not to use a terminal? Type `/plugin` in the Claude Code chat to open the plugin manager and update from there.
+
+Check what you have installed:
+
+```bash
+claude plugin list
+```
 
 ## Skills included
 
