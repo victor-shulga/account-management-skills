@@ -119,7 +119,9 @@ what we did → what came out; each section sets up the next. Mark visual placeh
    - **Solution → Business Challenge:** … `[SCREEN]`
    - **Solution → Technical Challenge:** … `[DIAGRAM]`
    - **Solution → Delivery Challenge:** …
-   Features are woven in here by the way, not as a detached list.
+   Features are woven in here by the way, not as a detached list. The technical steps live
+   here too — there is no separate "Approach" section competing with this one. This is the
+   largest section of the case (400–500 words).
 7. **Results & Business Value** — **before → after** with numbers `[METRIC]`, not "built a
    dashboard". Table: Metric · Before · After. Then the second **pull-quote** about the
    result `[QUOTE]`. Timeframe explicit.
@@ -133,10 +135,29 @@ what we did → what came out; each section sets up the next. Mark visual placeh
 12. **SEO / meta** — target keyword (in H1 + first 100 words), meta title ≤60 chars, meta
     description ≤155, alt tags on all visuals, internal links to adjacent cases/services.
 
-Voice: dry, specific, zero superlatives. ≤150 words/section — but USE the allowance:
-aim **~1000–1500 words total** across the sections. "2000 words" is the anti-goal
-(clarity, not length), yet a case with 40-word sections reads as underbaked, not clean.
-Fill each section with real story/decisions/context up to the ceiling; cut only water.
+Voice: dry, specific, zero superlatives.
+
+**Length is a gate, not a preference.** Body **1500–2000 words**. Under 1200 it is a project
+card, not a case study — go back to the SME for facts instead of shipping it. Per-section
+budget:
+
+| Section | Words |
+| --- | --- |
+| Title + number | 25 |
+| Snapshot | 60 |
+| About the client | 120 |
+| Challenge | 250 |
+| Why us + approach | 250 |
+| **Solution** | **400–500** |
+| Results before → after | 200 |
+| Features delivered | 120 |
+| Tech stack | 80 |
+| Testimonial | 80 |
+| CTA | 40 |
+
+Two inline pull-quotes add ~60 more. **Solution must be the largest section.** If it is
+shorter than Challenge, the case describes the problem instead of the work. A 40-word
+section reads as underbaked; fill each one with real decisions and context, cut only water.
 
 ## Weak-numbers mode
 
@@ -179,6 +200,7 @@ possible.
 - [ ] Snapshot panel filled
 - [ ] Each Challenge has a mapped Solution (1:1)
 - [ ] Results in before→after format with numbers
+- [ ] Body ≥1500 words and Solution is the largest section
 - [ ] 2+ pull-quotes + 1 full testimonial
 - [ ] CTA present, clickable, ends with a question
 - [ ] All `[markers]` replaced with final visuals
