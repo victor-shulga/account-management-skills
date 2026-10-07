@@ -1,6 +1,6 @@
 # account-management-engine
 
-Account management skills for B2B service companies: client health scoring, upsell mapping, case study production.
+Account management skills for B2B service companies: client health scoring, upsell mapping, case study production, renewals, quarterly reviews and customer success plans.
 
 Part of the GTM-system methodology by [Victor Shulga](https://victorshulga.com) (Fractional CRO).
 
@@ -41,6 +41,10 @@ claude plugin list
 - **`upsell-mapper`** — builds a client × services cross-sell matrix, finds the gaps, and prioritizes the realistic expansion moves.
 - **`account-dossier`** — research ONE target company as an outbound prospect → signal stack, fit against your ICP, decision-maker pair, two-pass lead score, risks, next actions and first-touch drafts in the prospect's language. Ships a built-in 100-point rubric (anti-ICP gates → 9 categories → band → action) that defers to your own approved rubric when you have one. Includes the corporate-structure trace (sister/JV entities are often the real buying entity) and the people-scan that turns "they're hiring" into a data-backed capacity gap.
 - **`customer-intelligence`** — mine your OWN case studies and review-site profiles → why customers actually buy: pain layers, triggers, verbatim customer language, proof metrics, competitive positioning. Run before defining ICP/personas.
+
+- **`renewal-playbook`** — a renewal calendar with a 60-day trigger, a renewal-risk read per account, the plays for T-60 / T-30 / T-7, save plays for accounts at risk and the rate-increase conversation.
+- **`qbr-builder`** — the quarterly review for one account (QBR) or for a client's board (board pack): result first, plan vs actual, value in the client's money or time, expansion asks, next-quarter plan with owners and dates.
+- **`cs-plan-builder`** — the customer success plan: the client's own success criteria, checkpoint rhythm, stakeholder map with risks, early-warning signals; plus a feedback mode that turns NPS answers and client feedback into a decision list.
 
 > **Which one?** `account-dossier` = prospect-side, one company you want to sell TO. `customer-intelligence` = vendor-side, your own customer base in aggregate. They take different inputs and produce different outputs — picking the wrong one is the most common misfire.
 
