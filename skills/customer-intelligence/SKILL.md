@@ -166,3 +166,27 @@ ask sales for the last 5 lost proposals".]
 
 Idea adapted from a public outbound-skills collection; rewritten.
 Written by Victor Shulga (victorshulga.com).
+
+## Terms and plain-language output
+
+<!-- glossary:start terms=evidence-log,pain-levels,phrase-bank,vendor-claim,buying-signal,rfp,why-now,persona -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| evidence log, IDs E1..En | журнал джерел | таблиця всіх джерел з номерами; кожна цитата і цифра у звіті посилається на номер |
+| pain levels: task / business / personal / standing | рівні болю: задача · бізнес · особисто · репутація | чим глибший рівень, тим сильніше біль працює в листах; ранжуємо все одно за частотою |
+| phrase bank | банк фраз клієнтів | дослівні слова клієнтів про проблему, результат і сумніви, готові для листів і сайту |
+| vendor claim | твердження компанії без підтвердження клієнтом | те, що ви кажете про себе, але жоден клієнт поки не підтвердив |
+| buying signal | ознака готовності купувати | факт про компанію, після якого розмова про вашу послугу доречна саме зараз. |
+| RFP | запит на пропозицію | документ, у якому клієнт описує задачу і просить кількох підрядників надіслати пропозиції |
+| why now, cost of inaction | ціна бездіяльності | що клієнт втрачає щомісяця, поки нічого не змінює |
+| persona, persona document | портрет покупця | опис типової людини, що купує: посада, задачі, болі, заперечення, де її шукати; будуємо лише з реальних даних. |
+<!-- glossary:end -->

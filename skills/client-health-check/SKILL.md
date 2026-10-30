@@ -49,3 +49,23 @@ account, ready to paste into the client's task tracker or CRM.
 - A client can be red with perfect payments — silence is a stronger churn signal
   than a late invoice.
 - The output ends with the single most urgent account and its next action.
+
+## Terms and plain-language output
+
+<!-- glossary:start terms=account-health,churn,economic-buyer,day-to-day-owner -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| health score, green / yellow / red | стан клієнта: усе добре · під наглядом · ризик втрати | підсумок за кількома ознаками: обсяг робіт, оплати, тон, доступ до ОПР, видимість результату |
+| churn | відтік клієнтів | частка клієнтів, які йдуть за місяць чи квартал. |
+| economic buyer, sponsor | той, хто платить | людина, яка розпоряджається бюджетом і підписує; без доступу до неї угода або продовження під ризиком |
+| day-to-day owner, champion | той, хто працюватиме з вами щодня | керівник проєкту, BIM-менеджер, керівник розробки; йому важливе інше, ніж ОПР |
+<!-- glossary:end -->

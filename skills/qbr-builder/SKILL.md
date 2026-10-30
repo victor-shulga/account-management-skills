@@ -69,7 +69,7 @@ Ask which mode if it is not obvious. Default to `QBR`.
 1. Account passport: client, service line, client since, current value, who from their side is in the room.
 2. Main point: 3 or 4 sentences. What the quarter delivered, where it slipped, the one step
    for next quarter. Written LAST, read first.
-3. Plan and actual: table with a "% of plan" column and a RAG status. Money at the top,
+3. Plan and actual: table with a "% of plan" column and a status column in words (on track · at risk · off track), never R/A/G letters. Money at the top,
    activities at the bottom.
 4. What we did: 3 to 5 events with their effect: event, then what it changed in their numbers.
    A task list does not belong here.
@@ -130,3 +130,32 @@ A calendar with every top account's QBR date for the next 12 months is part of t
 ## Credits
 
 Method by Victor Shulga (victorshulga.com).
+
+## Terms and plain-language output
+
+<!-- glossary:start terms=qbr,board-pack,plan-fact,rag-status,baseline,account-health,cross-sell-map,expand,forecast-methods,list-burnout,delivery-ceiling,win-rate,decision-maker -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| QBR | квартальна зустріч з клієнтом | раз на квартал разом з клієнтом підсумовуєте результати і плануєте наступні кроки. |
+| board pack, BOARD mode | звіт для ради директорів чи засновника | огляд усього продажу за квартал з рішеннями, яких просимо |
+| Plan · Actual · % of plan | план · факт · виконання | у кожному рядку видно відхилення без пошуку по тексту |
+| 🟢 On Track / 🟡 At Risk / 🔴 Off Track | у графіку · під загрозою · відстаємо | загальний стан проєкту одним кольором і словами. |
+| baseline, before / after | стартовий замір · порівняння до і після | перший аудит до змін, з яким порівнюємо результат після запуску. |
+| health score, green / yellow / red | стан клієнта: усе добре · під наглядом · ризик втрати | підсумок за кількома ознаками: обсяг робіт, оплати, тон, доступ до ОПР, видимість результату |
+| cross-sell map, client × services matrix | карта допродажів | таблиця клієнтів і послуг: що кожен купує, а що реально можна запропонувати |
+| expand, land-and-expand | допродаж після першої роботи | дорожчі сходинки не пропонуємо холодним людям, їх продаємо клієнту, який уже отримав результат на вхідному офері |
+| top-down / bottom-up forecast | прогноз від плану і від можливостей | від плану: ціль поділити на чек і частку виграних; від можливостей: потужність помножити на конверсії; різниця між ними і є темою обговорення |
+| list burnout | вичерпання списку | коли в сегменті закінчуються нові компанії, конверсія падає, хоча тексти ті самі |
+| delivery ceiling (hours × rate) | стеля виробництва | скільки роботи команда фізично може виконати; більше продати не вийде без найму |
+| win rate | частка виграних угод | скільки угод з поданих пропозицій закінчилось підписом. |
+| decision maker | ОПР (особа, що приймає рішення) | той, хто підписує: власник, операційний директор, керівник напряму |
+<!-- glossary:end -->

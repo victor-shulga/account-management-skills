@@ -139,3 +139,29 @@ survey. Never publish a score built on a handful of responses as a company metri
 ## Credits
 
 Method by Victor Shulga (victorshulga.com).
+
+## Terms and plain-language output
+
+<!-- glossary:start terms=stakeholder-map,leading-lagging,single-threaded,nps,economic-buyer,day-to-day-owner,qbr,churn,expand,account-health -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| stakeholder map | карта людей на стороні клієнта | хто платить, хто працює з вами щодня, хто користується результатом і що буде, якщо хтось піде |
+| leading / lagging metric, KPI (leading) | випереджальний · підсумковий показник | випереджальний видно за тиждень-два (відповіді, дзвінки), підсумковий приходить пізніше (угоди, гроші). |
+| single-threaded account | акаунт з одним контактом | уся співпраця тримається на одній людині; її відхід часто означає втрату клієнта |
+| NPS, detractor | індекс готовності рекомендувати | опитування від 0 до 10; головне в ньому уточнювальне питання і відповідь кожному незадоволеному за 48 годин |
+| economic buyer, sponsor | той, хто платить | людина, яка розпоряджається бюджетом і підписує; без доступу до неї угода або продовження під ризиком |
+| day-to-day owner, champion | той, хто працюватиме з вами щодня | керівник проєкту, BIM-менеджер, керівник розробки; йому важливе інше, ніж ОПР |
+| QBR | квартальна зустріч з клієнтом | раз на квартал разом з клієнтом підсумовуєте результати і плануєте наступні кроки. |
+| churn | відтік клієнтів | частка клієнтів, які йдуть за місяць чи квартал. |
+| expand, land-and-expand | допродаж після першої роботи | дорожчі сходинки не пропонуємо холодним людям, їх продаємо клієнту, який уже отримав результат на вхідному офері |
+| health score, green / yellow / red | стан клієнта: усе добре · під наглядом · ризик втрати | підсумок за кількома ознаками: обсяг робіт, оплати, тон, доступ до ОПР, видимість результату |
+<!-- glossary:end -->

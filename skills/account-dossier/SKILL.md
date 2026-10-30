@@ -157,6 +157,37 @@ Confidence is about *evidence*, not optimism: H = registry + people-scan + signa
 
 ---
 
+## Terms and plain-language output
+
+<!-- glossary:start terms=lead-score,lead-score-band,anti-icp,data-gap,data-confidence,watch-flags,signal-stack,economic-buyer,decision-maker,structure-trace,account-tier,fallback-rubric,first-touch,buying-signal,freshness-window -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| lead score, 100 pts, 9 categories | оцінка компанії в балах | бал до 100 за дев'ятьма критеріями відповідності вашому ICP і сигналами |
+| band (60+ / 40–59 / below 40) | група за сумою балів | оцінку ліда переводимо в групу (наприклад, гарячий · теплий · холодний), і від групи залежить наступний крок |
+| Anti-ICP, disqualifiers | кому не продаємо | ознаки компаній, з якими не працюємо, щоб не витрачати на них час. |
+| data-gap flag, missing → 0 | бракує даних | Поле, яке не вдалося знайти, ставимо в нуль з позначкою; середнє значення не вгадуємо. |
+| data confidence H / M / L | впевненість у даних: висока · середня · низька | Наскільки заповнені й перевірені поля компанії; від цього залежить, чи можна довіряти оцінці. |
+| watch-flags | що може змінити висновок | факти, які варто перевірити, бо вони піднімуть або опустять оцінку |
+| signal stack, S1..Sn | перелік сигналів | усі знайдені сигнали компанії з джерелом і датою, найсильніший першим |
+| economic buyer, sponsor | той, хто платить | людина, яка розпоряджається бюджетом і підписує; без доступу до неї угода або продовження під ризиком |
+| decision maker | ОПР (особа, що приймає рішення) | той, хто підписує: власник, операційний директор, керівник напряму |
+| structure trace, sister companies | перевірка пов'язаних компаній | шукаємо компанії з тією ж адресою чи директорами; іноді купує зовсім інша юрособа |
+| Tier 1 / Tier 2 / Tier 3, tier | тір: група компаній за розміром і чеком | усередині однієї ніші ділимо компанії за розміром і можливим чеком; від тіру залежить офер і скільки уваги даємо |
+| fallback rubric, not client-approved | запасна шкала оцінки | наша типова шкала, якою користуємось, поки немає погодженої з вами |
+| first-touch draft, track A / track B | перше повідомлення | чернетка першого листа чи повідомлення; окремо для технічного керівника і для власника |
+| buying signal | ознака готовності купувати | факт про компанію, після якого розмова про вашу послугу доречна саме зараз. |
+| freshness window, expiry window, decay | термін свіжості сигналу | скільки днів сигнал ще дає привід писати; потім він стає просто фактом |
+<!-- glossary:end -->
+
 ## Phase 5 — Output the dossier
 
 Structure. Sections 1–10 are the required core; 11+ are added per deep pass, each stamped with its date and sources.
@@ -208,7 +239,7 @@ missing direct signal.]
 [Every URL used, grouped by entity.]
 
 ## 9. Lead score — preliminary
-**Total = [n]/100 · Band: [BAND] → [action] · Confidence: [H/M/L]**
+**Total = [n]/100 · band in words (e.g. «гарячий: пишемо зараз») → [action] · confidence in words (high / medium / low, plus what was verified)**
 [State which rubric: client-approved, or built-in fallback.]
 | Category | Score | Rationale |
 **Anti-ICP gates:** [each checked, and its result — not just "none fired"]
